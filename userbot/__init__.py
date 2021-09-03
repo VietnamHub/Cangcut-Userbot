@@ -95,7 +95,7 @@ GITHUB_ACCESS_TOKEN = os.environ.get("GITHUB_ACCESS_TOKEN") or None
 
 # Custom (forked) repo URL for updater.
 UPSTREAM_REPO_URL = (os.environ.get("UPSTREAM_REPO_URL")
-                     or "https://github.com/vckyou/GeezProjects")
+                     or "https://github.com/Askarbot/Pussy-Userbot")
 
 # UPSTREAM_REPO_URL branch, the default is master
 UPSTREAM_REPO_BRANCH = os.environ.get("UPSTREAM_REPO_BRANCH") or "master"
@@ -317,7 +317,7 @@ with bot:
         async def handler(event):
             if event.message.from_id != uid:
                 await event.reply(
-                    f"Hai Saya adalah bot asissten {ALIVE_NAME}\n [Geez-Projects](https://github.com/Vckyou/Geez-Projects)\n please make your own bot, don't use mine"
+                    f"Hai Saya adalah bot asissten {ALIVE_NAME}\n [Pussy-Userbot](https://github.com/Askarbot/Pussy-Userbot)\n please make your own bot, don't use mine"
                 )
             else:
                 await event.reply(f"`Hey there {ALIVE_NAME}\n\nSaya siap membantu mu`")
@@ -340,7 +340,7 @@ with bot:
                 result = builder.article(
                     "Please Use Only With .help Command",
                     text="{}\nTotal loaded modules: {}".format(
-                        "[GeezProjects](https://github.com/vckyou/Geez-Projects) modules helper.\n",
+                        "[Pussy-Userbot](https://github.com/Askarbot/Pussy-Userbot) modules helper.\n",
                         len(dugmeler),
                     ),
                     buttons=buttons,
@@ -361,11 +361,11 @@ with bot:
                         [
                             custom.Button.url(
                                 "GitHub Repo",
-                                "https://github.com/vckyou/Geez-Projects",
+                                "https://github.com/Askarbot/Pussy-Userbot",
                             ),
                             custom.Button.url(
                                 "Group Support",
-                                "https://t.me/GeezSupportGroup"),
+                                "https://t.me/fourBrothersgroup"),
                         ],
                     ],
                     link_preview=False,
