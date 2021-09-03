@@ -36,7 +36,7 @@ DEF_UNAPPROVED_MSG = (
     f"│𝘒𝘢𝘳𝘦𝘯𝘢 𝘚𝘢𝘺𝘢 𝘈𝘬𝘢𝘯 𝘖𝘵𝘰𝘮𝘢𝘵𝘪𝘴 𝘔𝘦𝘮𝘣𝘭𝘰𝘬𝘪𝘳\n│𝘈𝘯𝘥𝘢, 𝘛𝘶𝘯𝘨𝘨𝘶 𝘚𝘢𝘮𝘱𝘢𝘪 {DEFAULTUSER}\n│𝘔𝘦𝘯𝘦𝘳𝘪𝘮𝘢 𝘗𝘦𝘴𝘢𝘯 𝘈𝘯𝘥𝘢, 𝘛𝘦𝘳𝘪𝘮𝘢𝘬𝘢𝘴𝘪𝘩.\n"
     "├┈──────────────────────\n"
     "│ ○› `AUTOMATIC MESSAGES`\n"
-    "│ ○› `BY` Geez Project\n"
+    "│ ○› `BY` Pussy Userbot\n"
     "╰┈────────────────")
 # =================================================================
 
@@ -95,9 +95,9 @@ async def permitpm(event):
 
             if COUNT_PM[event.chat_id] > 5:
                 await event.respond(
-                    "`Maaf Kamu Saya Block`\n"
+                    "`Maaf Kamu Saya Block ya kontol`\n"
                     "`Karena Telah Melakukan Spam`\n"
-                    "`Silahkan Tunggu Owner Saya Membukanya!!`"
+                    "`Silahkan Tunggu majikan Saya Membukanya!!`"
                 )
 
                 try:
@@ -236,9 +236,9 @@ async def approvepm(apprvpm):
     try:
         approve(uid)
     except IntegrityError:
-        return await apprvpm.edit("`OK, Pesan Telah Diterima..`")
+        return await apprvpm.edit("`OK, Pesan Telah Diterima ya entot..`")
 
-    await apprvpm.edit(f"[{name0}](tg://user?id={uid}) `OK, Pesan Telah Diterima..`")
+    await apprvpm.edit(f"[{name0}](tg://user?id={uid}) `OK, Pesan Telah Diterima ya entot..`")
     await apprvpm.delete()
     await bot.delete_message(getmsg)
 
