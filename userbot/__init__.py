@@ -168,7 +168,7 @@ TEMP_DOWNLOAD_DIRECTORY = os.environ.get(
     "TMP_DOWNLOAD_DIRECTORY") or "./downloads"
 
 # Terminal Alias
-TERM_ALIAS = os.environ.get("TERM_ALIAS") or "GeezProjects"
+TERM_ALIAS = os.environ.get("TERM_ALIAS") or "PussyUserbot"
 
 # Genius Lyrics API
 GENIUS = os.environ.get("GENIUS_ACCESS_TOKEN") or None
@@ -177,10 +177,10 @@ GENIUS = os.environ.get("GENIUS_ACCESS_TOKEN") or None
 CUSTOM_CMD = os.environ.get("CUSTOM_CMD") or "."
 
 # Sticker Custom Pack Name
-S_PACK_NAME = os.environ.get("S_PACK_NAME") or "Stickers By @GeezProjects"
+S_PACK_NAME = os.environ.get("S_PACK_NAME") or "Stickers By @fourBrothersgroup"
 
 # Bot version
-BOT_VER = os.environ.get("BOT_VER", "Geez V 0.1")
+BOT_VER = os.environ.get("BOT_VER", "Pussy V 0.1")
 
 CMD_HELP = {}
 
