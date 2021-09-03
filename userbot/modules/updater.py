@@ -100,7 +100,7 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
         if BOTLOG:
             await event.client.send_message(
                 BOTLOG_CHATID, "#NOTE \n"
-                "GeezProjects 🔥 Berhasil Di Update✓")
+                "Pussy-Userbot 🔥 Berhasil Di Update✓")
 
     else:
         await event.edit('`[HEROKU]:'
@@ -117,9 +117,9 @@ async def update(event, repo, ups_rem, ac_br):
     except GitCommandError:
         repo.git.reset("--hard", "FETCH_HEAD")
     await update_requirements()
-    await event.edit('**GeezProject** Berhasil Di Update✓')
+    await event.edit('**PussyUserbot** Berhasil Di Update✓')
     await asyncio.sleep(1)
-    await event.edit('`GeezProjects Di Restart....`')
+    await event.edit('`PussyUserbot Di Restart....`')
     await asyncio.sleep(1)
     await event.edit('`Silahkan Tunggu Beberapa Detik..`')
     await asyncio.sleep(10)
@@ -190,13 +190,13 @@ async def upstream(event):
 
     if changelog == '' and force_update is False:
         await event.edit(
-            f'\n`🔥GeezProjects🔥\n` sudah **versi terbaru**\n`BRANCH:`**{UPSTREAM_REPO_BRANCH}**\n')
+            f'\n`🔥PussyUserbot🔥\n` sudah **versi terbaru**\n`BRANCH:`**{UPSTREAM_REPO_BRANCH}**\n')
         await asyncio.sleep(15)
         await event.delete()
         return repo.__del__()
 
     if conf is None and force_update is False:
-        changelog_str = f'**UPDATE Terbaru Untuk 🔥GeezProjects🔥 [{ac_br}]:\n\nPERUBAHAN:**\n`{changelog}`'
+        changelog_str = f'**UPDATE Terbaru Untuk 🔥PussyUserbot🔥 [{ac_br}]:\n\nPERUBAHAN:**\n`{changelog}`'
         if len(changelog_str) > 4096:
             await event.edit("`Changelog is too big, view the file to see it.`")
             file = open("output.txt", "w+")
@@ -216,10 +216,10 @@ async def upstream(event):
         await event.edit(
             '`Force-Syncing to latest stable userbot code, please wait...`')
     else:
-        await event.edit('`Proses Update GeezProjects, ....🛠️`')
-        await event.edit('`Proses Update GeezProjects, loading....🛠️`')
-        await event.edit('`Proses Update GeezProjects, updating....🛠️`')
-        await event.edit('`Proses Update GeezProjects\nSilahkan tunggu....🛠️`')
+        await event.edit('`Proses Update PussyUserbot, ....🛠️`')
+        await event.edit('`Proses Update PussyUserbot, loading....🛠️`')
+        await event.edit('`Proses Update PussyUserbot, updating....🛠️`')
+        await event.edit('`Proses Update PussyUserbot\nSilahkan tunggu....🛠️`')
     if conf == "now":
         await update(event, repo, ups_rem, ac_br)
         await asyncio.sleep(10)
@@ -233,10 +233,10 @@ async def upstream(event):
 
 CMD_HELP.update({
     'update':
-    f"{geez}update"
+    f"{pussy}update"
     "\nUsage: Checks if the main userbot repository has any updates and shows a changelog if so."
-    "\n\n{geez}update now"
+    "\n\n{pussy}update now"
     "\nUsage: Update your userbot, if there are any updates in your userbot repository."
-    "\n\n{geez}update deploy"
+    "\n\n{pussy}update deploy"
     "\nUsage: Deploy your userbot at heroku, if there are any updates in your userbot repository."
 })
