@@ -69,7 +69,7 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
             )
             return repo.__del__()
         await event.edit('`[HEROKU]:'
-                         '\nUpdate Deploy GeezProjects, Silahkan Tunggu 5-8 menit..`'
+                         '\nUpdate Deploy PussyUserbot, Silahkan Tunggu 5-8 menit..`'
                          )
         ups_rem.fetch(ac_br)
         repo.git.reset("--hard", "FETCH_HEAD")
