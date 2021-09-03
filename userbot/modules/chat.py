@@ -109,7 +109,7 @@ async def log(log_text):
 @bot.on(geezbot_cmd(outgoing=True, pattern="kickme$"))
 async def kickme(leave):
     """ Basically it's .kickme command """
-    await leave.edit("Master left the chat 😛")
+    await leave.edit("gua left aja lah, bye anak anak ngentot")
     await leave.client.kick_participant(leave.chat_id, 'me')
 
 
