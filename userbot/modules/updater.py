@@ -233,10 +233,10 @@ async def upstream(event):
 
 CMD_HELP.update({
     'update':
-    f"{pussy}update"
+    f"{geez}update"
     "\nUsage: Checks if the main userbot repository has any updates and shows a changelog if so."
-    "\n\n{pussy}update now"
+    "\n\n{geez}update now"
     "\nUsage: Update your userbot, if there are any updates in your userbot repository."
-    "\n\n{pussy}update deploy"
+    "\n\n{geez}update deploy"
     "\nUsage: Deploy your userbot at heroku, if there are any updates in your userbot repository."
 })
