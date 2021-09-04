@@ -81,7 +81,7 @@ def speed_convert(size):
     return f"{round(size, 2)} {units[zero]}"
 
 
-@register(outgoing=True, pattern=r"^\"ping$")
+@bot.on(geezbot_cmd(outgoing=True, pattern="ping$"))
 async def pingme(pong):
     """For .ping command, ping the userbot from any chat."""
     uptime = await get_readable_time((time.time() - StartTime))
