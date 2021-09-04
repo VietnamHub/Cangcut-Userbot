@@ -90,6 +90,8 @@ async def pingme(pong):
     await pong.edit("`Pinging..`")
     await pong.edit("`Pinging...`")
     await pong.edit("`Pinging....`")
+    await pong.edit("⚡")
+    await asyncio.sleep(2)
     end = datetime.now()
     duration = (end - start).microseconds / 1000
     await pong.edit(f"**⚡PUSSY PINK⚡**\n**Pinger** : %sms\n**Bot Uptime** : {uptime}🕛" % (duration))
