@@ -7,7 +7,7 @@ from userbot import CMD_HELP
 from userbot.events import register
 
 
-@register(outgoing=True, pattern=r"^\!!asupan$")
+@register(outgoing=True, pattern=r"^\"asupan$")
 async def _(event):
     try:
         response = requests.get(
@@ -18,7 +18,7 @@ async def _(event):
         await event.edit("**Tidak bisa menemukan video asupan.**")
 
 
-@register(outgoing=True, pattern=r"^\!!wibu$")
+@register(outgoing=True, pattern=r"^\"wibu$")
 async def _(event):
     try:
         response = requests.get(
@@ -29,7 +29,7 @@ async def _(event):
         await event.edit("**Tidak bisa menemukan video wibu.**")
 
 
-@register(outgoing=True, pattern=r"^\!!chika$")
+@register(outgoing=True, pattern=r"^\"chika$")
 async def _(event):
     try:
         response = requests.get(
