@@ -83,20 +83,16 @@ def speed_convert(size):
 
 @bot.on(geezbot_cmd(outgoing=True, pattern="ping$"))
 async def pingme(pong):
-    """For .ping command, ping the userbot from any chat."""
+    """ For .ping command, ping the userbot from any chat.  """
     uptime = await get_readable_time((time.time() - StartTime))
     start = datetime.now()
-    await pong.edit("**✣**")
-    await pong.edit("**✣✣**")
-    await pong.edit("**✣✣✣**")
-    await pong.edit("**✣✣✣✣**")
+    await pong.edit("`Pinging.`")
+    await pong.edit("`Pinging..`")
+    await pong.edit("`Pinging...`")
+    await pong.edit("`Pinging....`")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
-    await pong.edit(
-        f"**⚡PUSSY PINK⚡**\n"
-        f"✣ **Pinger** - `%sms`\n"
-        f"✣ **Uptime -** `{uptime}` \n"
-        f"**✦҈͜͡Owner :** `{ALIVE_NAME}`" % (duration)
+    await pong.edit(f"**⚡PUSSY PINK⚡**\n**Pinger** : %sms\n**Bot Uptime** : {uptime}🕛" % (duration))
 
 
 @bot.on(geezbot_cmd(outgoing=True, pattern="pong$"))
