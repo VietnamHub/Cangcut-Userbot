@@ -241,6 +241,7 @@ async def amireallyalive(alive):
     await alive.edit("__Sedang Memuat...__")
     await alive.edit("⚡")
     await asyncio.sleep(2)
+    output = (
         f"╭═──────╼═⌘═╾───────═\n"
         f"┃       ⚡𝐏𝐔𝐒𝐒𝐘-𝐔𝐒𝐄𝐑𝐁𝐎𝐓⚡\n"
         f"╰═─────╼══⌘══╾─────═ \n"
