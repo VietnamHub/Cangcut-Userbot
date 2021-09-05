@@ -19,7 +19,7 @@ async def typewriter(typew):
 # Owner @Si_Dian
 
 
-@bot.on(geezbot_cmd(outgoing=True, pattern='P(?: |$)(.*)'))
+@bot.on(geezbot_cmd(outgoing=True, pattern='p(?: |$)(.*)'))
 async def typewriter(typew):
     typew.pattern_match.group(1)
     sleep(1)
@@ -51,8 +51,8 @@ async def typewriter(typew):
 
 CMD_HELP.update({
     "salam":
-    "`.P`\
+    "`P`\
 \nUsage: Untuk Memberi salam.\
-\n\n`.L`\
+\n\n`L`\
 \nUsage: Untuk Menjawab Salam."
 })
