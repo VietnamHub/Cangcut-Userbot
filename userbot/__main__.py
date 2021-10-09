@@ -30,7 +30,7 @@ for module_name in ALL_MODULES:
 
 
 LOGS.info(
-    "🔥 Pussy-Projects 🔥 [SUCCESSFUL ACTIVATED! ⚙️]")
+    "🔥 Cangcut-Userbot 🔥 [SUCCESSFUL ACTIVATED! ⚙️]")
 
 
 if len(argv) not in (1, 3, 4):
