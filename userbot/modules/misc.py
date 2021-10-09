@@ -97,13 +97,11 @@ async def repeat(rep):
 async def repo_is_here(wannasee):
     """ For .repo command, just returns the repo URL. """
     await wannasee.edit(
-        "╭‒─‒──────────‒─‒\n"
-        "│                   ʀᴇᴘᴏ\n"
-        "│      [⚡Pussy-Userbot⚡](https://github.com/Askarbot/Pussy-Userbot)\n"
-        "├‒─‒──────────‒\n"
-        "│🔰 **ᴏᴡɴᴇʀ :** [Skyzu](t.me/skyzuuuu)\n"
-        "╰‒─‒──────────\n"
-        "  𝗟𝗶𝗰𝗲𝗻𝘀𝗲 : [GPL-3.0 License](https://github.com/Askarbot/Pussy-Userbot/blob/Pussy-UserBot/LICENSE)"
+        "**__USERBOT TERBAIK__**\n"
+        "𝗥𝗲𝗽𝗼 🏴󠁧󠁢󠁥󠁮󠁧󠁿\n"
+        "╰⎆ [🚀Cangcut-Userbot🚀](https://github.com/maspion27/Owl-Userbot)\n"
+        "❏ 𝗢𝘄𝗻𝗲𝗿 ⎆ [Can](t.me/thatscan)\n"
+         ❏ 𝗢𝘄𝗻𝗲𝗿 ⎆ [Sky](t.me/skyzuuuu)\n"
     )
 
 
