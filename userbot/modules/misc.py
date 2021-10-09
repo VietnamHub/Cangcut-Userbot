@@ -101,7 +101,7 @@ async def repo_is_here(wannasee):
         "𝗥𝗲𝗽𝗼 🏴󠁧󠁢󠁥󠁮󠁧󠁿\n"
         "╰⎆ [🚀Cangcut-Userbot🚀](https://github.com/maspion27/Owl-Userbot)\n"
         "❏ 𝗢𝘄𝗻𝗲𝗿 ⎆ [Can](t.me/thatscan)\n"
-         ❏ 𝗢𝘄𝗻𝗲𝗿 ⎆ [Sky](t.me/skyzuuuu)\n"
+        "❏ 𝗢𝘄𝗻𝗲𝗿 ⎆ [Sky](t.me/skyzuuuu)\n"
     )
 
 
