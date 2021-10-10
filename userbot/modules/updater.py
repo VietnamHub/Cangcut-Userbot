@@ -69,7 +69,7 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
             )
             return repo.__del__()
         await event.edit('`[HEROKU]:'
-                         '\nUpdate Deploy 𝐏𝐔𝐒𝐒𝐘-𝐔𝐒𝐄𝐑𝐁𝐎𝐓, Silahkan Tunggu 5-8 menit..`'
+                         '\nUpdate Deploy Cangcut-Userbot, Silahkan Tunggu 5-8 menit..`'
                          )
         ups_rem.fetch(ac_br)
         repo.git.reset("--hard", "FETCH_HEAD")
@@ -93,7 +93,7 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
             await asyncio.sleep(5)
             return await event.delete()
         else:
-            await event.edit("`Berhasil Update Deploy!\n" "Merestart 𝐏𝐔𝐒𝐒𝐘-𝐔𝐒𝐄𝐑𝐁𝐎𝐓, silahkan tunggu...`")
+            await event.edit("`Berhasil Update Deploy!\n" "Merestart Cangcut-userbot, silahkan tunggu...`")
             await asyncio.sleep(15)
             await event.delete()
 
