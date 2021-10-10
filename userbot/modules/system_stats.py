@@ -242,21 +242,15 @@ async def amireallyalive(alive):
     await alive.edit("⚡")
     await asyncio.sleep(2)
     output = (
-        f"╭═──────╼═⌘═╾───────═\n"
-        f"┃       🚀Cangcut-userbot🚀\n"
-        f"╰═─────╼══⌘══╾─────═ \n"
-        f" ❍ `Name     :` {DEFAULTUSER} \n"
-        f" ❍ `Username :` @{user.username} \n"
-        f" ❍ `Telethon :` Ver {version.__version__} \n"
-        f" ❍ `Python   :` Ver {python_version()} \n"
-        f" ❍ `Branch   :` {UPSTREAM_REPO_BRANCH} \n"
-        f" ❍ `Bot Ver  :` {BOT_VER} \n"
-        f" ❍ `Modules  :` {len(modules)} Modules \n"
-        f"╭═───────╼⌘╾───────═ \n"
-        f"┃[𝗥𝗲𝗽𝗼](https://github.com/Askarbot/Cangcut-Userbot)  |  [𝗦𝘂𝗽𝗽𝗼𝗿𝘁](t.me/SharingUserbot)  |  "
-        f"𝗢𝘄𝗻𝗲𝗿 [sky](t.me/skyzuuuu)\n"
-        f"𝗢𝘄𝗻𝗲𝗿 [can](t.me/thatscan)\n"
-        f"╰═──────╼═⌘═╾───────═")
+        f"**[Cangcut-Userbot](https://github.com/Askarbot/Cangcut-Userbot) is Up and Running.**\n\n"
+        f"**{ALIVE_NAME}**\n\n"
+        f"{ALIVE_EMOJI} **Master :** `{DEFAULTUSER}` \n"
+        f"{ALIVE_EMOJI} **Modules :** `{len(modules)} Modules` \n"
+        f"{ALIVE_EMOJI} **Bot Version :** `{BOT_VER}` \n"
+        f"{ALIVE_EMOJI} **Python Version :** `{python_version()}` \n"
+        f"{ALIVE_EMOJI} **Telethon Version :** `{version.__version__}` \n"
+        f"{ALIVE_EMOJI} **Bot Uptime :** `{uptime}` \n\n"
+        "    **[Support](https://t.me/SharingUserbot)** | **[𝗖𝗵𝗮𝗻𝗻𝗲𝗹](https://t.me/Lunatic0de)**")
     if ALIVE_LOGO:
         try:
             logo = ALIVE_LOGO
