@@ -231,7 +231,7 @@ async def pipcheck(pip):
 @bot.on(geezbot_cmd(outgoing=True, pattern=r"alive$"))
 async def amireallyalive(alive):
     user = await bot.get_me()
-    await get_readable_time((time.time() - StartTime))
+    uptime = await get_readable_time((time.time() - StartTime))
     await alive.edit("__Reconnect.__")
     await alive.edit("__Reconnect..__")
     await alive.edit("__Reconnect.__")
