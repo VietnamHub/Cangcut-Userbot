@@ -243,7 +243,7 @@ async def amireallyalive(alive):
     await asyncio.sleep(2)
     output = (
         f"╭═──────╼═⌘═╾───────═\n"
-        f"┃       ⚡𝐏𝐔𝐒𝐒𝐘-𝐔𝐒𝐄𝐑𝐁𝐎𝐓⚡\n"
+        f"┃       🚀Cangcut-userbot🚀\n"
         f"╰═─────╼══⌘══╾─────═ \n"
         f" ❍ `Name     :` {DEFAULTUSER} \n"
         f" ❍ `Username :` @{user.username} \n"
@@ -253,8 +253,9 @@ async def amireallyalive(alive):
         f" ❍ `Bot Ver  :` {BOT_VER} \n"
         f" ❍ `Modules  :` {len(modules)} Modules \n"
         f"╭═───────╼⌘╾───────═ \n"
-        f"┃[𝗥𝗲𝗽𝗼](https://github.com/Askarbot/Pussy-Userbot)  |  [𝗦𝘂𝗽𝗽𝗼𝗿𝘁](t.me/fourBrothersgroup)  |  "
-        f"[𝗜𝗻𝘀𝘁𝗮𝗴𝗿𝗮𝗺](https://www.instagram.com/askarrr06/)\n"
+        f"┃[𝗥𝗲𝗽𝗼](https://github.com/Askarbot/Cangcut-Userbot)  |  [𝗦𝘂𝗽𝗽𝗼𝗿𝘁](t.me/SharingUserbot)  |  "
+        f"𝗢𝘄𝗻𝗲𝗿 [sky](t.me/skyzuuuu)\n"
+        f"𝗢𝘄𝗻𝗲𝗿 [can](t.me/thatscan)\n"
         f"╰═──────╼═⌘═╾───────═")
     if ALIVE_LOGO:
         try:
