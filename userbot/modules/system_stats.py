@@ -249,7 +249,7 @@ async def amireallyalive(alive):
         f"{ALIVE_EMOJI} **Bot Version :** `{BOT_VER}` \n"
         f"{ALIVE_EMOJI} **Python Version :** `{python_version()}` \n"
         f"{ALIVE_EMOJI} **Telethon Version :** `{version.__version__}` \n"
-        f"{ALIVE_EMOJI} **Bot Uptime :** `{StartTime}` \n\n"
+        f"{ALIVE_EMOJI} **Bot Uptime :** `{uptime}` \n\n"
         "    **[Support](https://t.me/SharingUserbot)** | **[𝗖𝗵𝗮𝗻𝗻𝗲𝗹](https://t.me/Lunatic0de)**")
     if ALIVE_LOGO:
         try:
