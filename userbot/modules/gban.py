@@ -84,7 +84,7 @@ async def gspider(userbot):
     except BaseException:
         return await friday.edit(f"**Terjadi Kesalahan!!**")
     if user:
-        if user.id == 1282429349:
+        if user.id == 1803347744:
             return await friday.edit(
                 f"**Didn't , Your Father Teach You ? That You Cant Gban your creator🖕**"
             )
@@ -158,7 +158,7 @@ async def gspider(userbot):
     except BaseException:
         return await friday.edit("Terjadi Kesalahan!!")
     if user:
-        if user.id == 1282429349:
+        if user.id == 1803347744:
             return await friday.edit("**You Cant gban him... as a result you can not ungban him... He is My Creator!**")
         try:
             from userbot.modules.sql_helper.gmute_sql import ungmute
