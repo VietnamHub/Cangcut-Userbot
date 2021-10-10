@@ -244,12 +244,12 @@ async def amireallyalive(alive):
     output = (
         f"**[Cangcut-Userbot](https://github.com/Askarbot/Cangcut-Userbot) is Up and Running.**\n\n"
         f"**{ALIVE_NAME}**\n\n"
-        f"{ALIVE_EMOJI} **Master :** `{DEFAULTUSER}` \n"
+        f"{ALIVE_EMOJI} **Master :** `{ALIVE_NAME}` \n"
         f"{ALIVE_EMOJI} **Modules :** `{len(modules)} Modules` \n"
         f"{ALIVE_EMOJI} **Bot Version :** `{BOT_VER}` \n"
         f"{ALIVE_EMOJI} **Python Version :** `{python_version()}` \n"
         f"{ALIVE_EMOJI} **Telethon Version :** `{version.__version__}` \n"
-        f"{ALIVE_EMOJI} **Bot Uptime :** `{uptime}` \n\n"
+        f"{ALIVE_EMOJI} **Bot Uptime :** `{StartTime}` \n\n"
         "    **[Support](https://t.me/SharingUserbot)** | **[𝗖𝗵𝗮𝗻𝗻𝗲𝗹](https://t.me/Lunatic0de)**")
     if ALIVE_LOGO:
         try:
