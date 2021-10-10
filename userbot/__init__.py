@@ -75,6 +75,9 @@ LOGSPAMMER = sb(os.environ.get("LOGSPAMMER") or "True")
 # Default .alive name
 ALIVE_NAME = os.environ.get("ALIVE_NAME") or None
 
+# Custom Emoji Alive
+ALIVE_EMOJI = os.environ.get("ALIVE_EMOJI", "🚀")
+
 # Default .alive logo
 ALIVE_LOGO = os.environ.get("ALIVE_LOGO") or None
 
