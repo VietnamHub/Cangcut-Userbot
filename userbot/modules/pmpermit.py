@@ -29,15 +29,7 @@ from userbot import CUSTOM_CMD as geez
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 
 DEF_UNAPPROVED_MSG = (
-    "╭┈──────────────────────\n"
-    "│“KHÔNG NHẮN TIN RIÊNG CHO TÔI”\n"
-    "├┈────────────────────\n"
-    "│VÀO LINK Ở DƯỚI ĐỂ VÀO NHÓM❗\n│\n"
-    f"│https://t.me/+S5obLSW8ChIxNjA1"
-    "├┈──────────────────────\n"
-    "│ ○› `NẾU KHÔNG VÀO ĐƯỢC`\n"
-    "│ ○› `XEM HƯỚNG DẪN` TẠI @TROGIUP\n"
-    "╰┈────────────────")
+    "https://t.me/+S5obLSW8ChIxNjA1")
 # =================================================================
 
 
