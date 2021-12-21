@@ -320,10 +320,10 @@ with bot:
         async def handler(event):
             if event.message.from_id != uid:
                 await event.reply(
-                    f"Hai Saya adalah bot asissten {ALIVE_NAME}\n [Pussy-Userbot](https://github.com/Askarbot/Pussy-Userbot)\n please make your own bot, don't use mine"
+                    f"Xin chào tôi là trợ lý bot {ALIVE_NAME}"
                 )
             else:
-                await event.reply(f"`Hey there {ALIVE_NAME}\n\nSaya siap membantu mu`")
+                await event.reply(f"`Xin chào {ALIVE_NAME}\n\nTôi sẵn sàng giúp bạn`")
 
         @tgbot.on(events.NewMessage(pattern="/ping"))
         async def handler(event):
@@ -343,7 +343,7 @@ with bot:
                 result = builder.article(
                     "Please Use Only With .help Command",
                     text="{}\nTotal loaded modules: {}".format(
-                        "[Pussy-Userbot](https://github.com/Askarbot/Pussy-Userbot) modules helper.\n",
+                        "owogram modules helper.\n",
                         len(dugmeler),
                     ),
                     buttons=buttons,
@@ -351,24 +351,24 @@ with bot:
                 )
             elif query.startswith("tb_btn"):
                 result = builder.article(
-                    "Geez-Projects modules helper",
+                    "owogram modules helper",
                     text="List of Modules",
                     buttons=[],
                     link_preview=True,
                 )
             else:
                 result = builder.article(
-                    "Geez-Projects",
-                    text="""You can convert your account to bot and use them. Remember, you can't manage someone else's bot! All installation details are explained from GitHub address below.""",
+                    "owogram",
+                    text="""Bạn có thể chuyển đổi tài khoản của mình thành bot và sử dụng chúng. Hãy nhớ rằng, bạn không thể quản lý bot của người khác! Tất cả các chi tiết cài đặt được giải thích từ địa chỉ GitHub bên dưới.""",
                     buttons=[
                         [
                             custom.Button.url(
-                                "GitHub Repo",
-                                "https://github.com/Askarbot/Pussy-Userbot",
+                                "owogram",
+                                "https://t.me/owogram",
                             ),
                             custom.Button.url(
                                 "Group Support",
-                                "https://t.me/fourBrothersgroup"),
+                                "https://t.me/owogram"),
                         ],
                     ],
                     link_preview=False,
@@ -389,7 +389,7 @@ with bot:
                 # https://t.me/TelethonChat/115200
                 await event.edit(buttons=buttons)
             else:
-                reply_pop_up_alert = "Please make for yourself, don't use my bot!"
+                reply_pop_up_alert = "Hãy làm cho chính mình, không sử dụng bot của tôi!"
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
         @tgbot.on(
@@ -407,7 +407,7 @@ with bot:
                 # https://t.me/TelethonChat/115200
                 await event.edit(buttons=buttons)
             else:
-                reply_pop_up_alert = "Please make for yourself, don't use my bot!"
+                reply_pop_up_alert = "Hãy làm cho chính mình, không sử dụng bot của tôi!!"
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
         @tgbot.on(
@@ -439,13 +439,13 @@ with bot:
                     )
                 )
             else:
-                reply_pop_up_alert = "Please make for yourself, don't use my bot!"
+                reply_pop_up_alert = "Hãy làm cho chính mình, không sử dụng bot của tôi!"
 
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
     except BaseException:
         LOGS.info(
-            "Support for inline is disabled on your bot. "
+            "Hỗ trợ cho nội tuyến bị tắt trên bot của bạn. "
             "To enable it, define a bot token and enable inline mode on your bot. "
             "If you think there is a problem other than this, contact us.")
     try:
