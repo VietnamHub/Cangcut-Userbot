@@ -39,7 +39,7 @@ async def get_full_user(event):
         try:
             user_obj = await event.client.get_entity(user)
         except Exception as err:
-            return await event.edit("Something Went Wrong", str(err))
+            return await event.edit("Có gì đó sai", str(err))
     return user_obj, extra
 
 
@@ -60,11 +60,11 @@ async def gspider(userbot):
     sender = await lol.get_sender()
     me = await lol.client.get_me()
     if not sender.id == me.id:
-        friday = await lol.reply("Gbanning User..")
+        friday = await lol.reply("Gbanning người dùng..")
     else:
-        friday = await lol.edit("Wait Processing.....")
+        friday = await lol.edit("Chờ xử lý.....")
     me = await userbot.client.get_me()
-    await friday.edit(f"**Global Ban user..**")
+    await friday.edit(f"**Đã cấm người dùng khỏi toàn bộ nhóm tôi làm admin..**")
     my_mention = "[{}](tg://user?id={})".format(me.first_name, me.id)
     f"@{me.username}" if me.username else my_mention
     await userbot.get_chat()
@@ -82,11 +82,11 @@ async def gspider(userbot):
         if not reason:
             reason = "Private"
     except BaseException:
-        return await friday.edit(f"**Terjadi Kesalahan!!**")
+        return await friday.edit(f"**Có một lỗi!!**")
     if user:
-        if user.id == 1803347744:
+        if user.id == 1920635554:
             return await friday.edit(
-                f"**Didn't , Your Father Teach You ? That You Cant Gban your creator🖕**"
+                f"**Cha của bạn đã không dạy bạn? Rằng bạn không thể cấm người sáng tạo của bạn🖕**"
             )
         try:
             from userbot.modules.sql_helper.gmute_sql import gmute
@@ -105,18 +105,18 @@ async def gspider(userbot):
             try:
                 await userbot.client.edit_permissions(i, user, view_messages=False)
                 a += 1
-                await friday.edit(f"**GBANNED // Total Affected Chats **: `{a}`")
+                await friday.edit(f"**GBANNED // Tổng số cuộc trò chuyện bị ảnh hưởng **: `{a}`")
             except BaseException:
                 b += 1
     else:
-        await friday.edit(f"**Reply to a user !!**")
+        await friday.edit(f"**Trả lời người dùng!!**")
     try:
         if gmute(user.id) is False:
-            return await friday.edit(f"**Error! User telah di gbanned.**")
+            return await friday.edit(f"**Lỗi! Người dùng đã bị cấm.**")
     except BaseException:
         pass
     return await friday.edit(
-        f"**Gbanned [{user.first_name}](tg://user?id={user.id}) Dari : {a} Group**"
+        f"**Gbanned [{user.first_name}](tg://user?id={user.id}) Từ : {a} nhóm**"
     )
 
     if BOTLOG:
@@ -134,11 +134,11 @@ async def gspider(userbot):
     sender = await lol.get_sender()
     me = await lol.client.get_me()
     if not sender.id == me.id:
-        friday = await lol.reply("`Wait Let Me Process`")
+        friday = await lol.reply("`Chờ để tôi xử lý`")
     else:
-        friday = await lol.edit("Just a Second ")
+        friday = await lol.edit("Chỉ một giây thôi ")
     me = await userbot.client.get_me()
-    await friday.edit(f"Trying To Ungban User !")
+    await friday.edit(f"Đang cố gắng Bỏ cấm người dùng!")
     my_mention = "[{}](tg://user?id={})".format(me.first_name, me.id)
     f"@{me.username}" if me.username else my_mention
     await userbot.get_chat()
@@ -156,10 +156,10 @@ async def gspider(userbot):
         if not reason:
             reason = "Private"
     except BaseException:
-        return await friday.edit("Terjadi Kesalahan!!")
+        return await friday.edit("Có một lỗi !!")
     if user:
-        if user.id == 1803347744:
-            return await friday.edit("**You Cant gban him... as a result you can not ungban him... He is My Creator!**")
+        if user.id == 1920635554:
+            return await friday.edit("**Bạn không thể cấm anh ta ... kết quả là bạn không thể cấm anh ta ... Anh ta là Người tạo ra tôi!**")
         try:
             from userbot.modules.sql_helper.gmute_sql import ungmute
         except BaseException:
@@ -177,14 +177,14 @@ async def gspider(userbot):
             try:
                 await userbot.client.edit_permissions(i, user, send_messages=True)
                 a += 1
-                await friday.edit(f"**UNGBANNING // AFFECTED CHATS - {a} **")
+                await friday.edit(f"**UNGBANNING // TRÒ CHUYỆN CÓ ẢNH HƯỞNG - {a} **")
             except BaseException:
                 b += 1
     else:
-        await friday.edit("**Reply to a user !!**")
+        await friday.edit("**Trả lời người dùng !!**")
     try:
         if ungmute(user.id) is False:
-            return await friday.edit("**Error! User probably already ungbanned.**")
+            return await friday.edit("**Lỗi! Người dùng có thể đã được bỏ cấm.**")
     except BaseException:
         pass
     return await friday.edit(
@@ -195,7 +195,7 @@ async def gspider(userbot):
 CMD_HELP.update({
     "gban": f"\
 `{geez}gban reason`\
-\nUsage: Globally Ban users from all the Group Administrations bots where you are SUDO.\
+\nUsage: Trên toàn cầu Cấm người dùng khỏi tất cả các bot Quản trị nhóm nơi bạn là SUDO.\
 \n\n`{geez}ungban reason`\
-\nUsage: Globally unBan users from all the Group Administrations bots where you are SUDO"
+\nUsage: Bỏ Cấm người dùng trên toàn cầu khỏi tất cả các bot Quản trị nhóm nơi bạn đang SUDO"
 })
