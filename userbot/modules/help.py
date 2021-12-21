@@ -15,7 +15,7 @@ modules = CMD_HELP
 
 @bot.on(geezbot_cmd(outgoing=True, pattern="help(?: |$)(.*)"))
 async def help(event):
-    """ For .help command,"""
+    """ Đối với lệnh .help,"""
     args = event.pattern_match.group(1).lower()
     if args:
         if args in CMD_HELP:
@@ -26,12 +26,12 @@ async def help(event):
             await event.delete()
     else:
         await event.edit(f"**╭────────────────────**\
-            \n│   Help for Cangcut-userbot \
+            \n│   Trợ giúp cho owogram \
             \n╰────────────────── \
             \n╭────────────────────\
-            \n│  Untuk melihat lengkap CMD\
-            \n│  Contoh: {geez}help <nama module>\
-            \n│  Modules Aktif: {len(modules)}\
+            \n│  Để xem CMD đầy đủ\
+            \n│  Thí dụ: {geez}help <nama module>\
+            \n│  Mô-đun hoạt động: {len(modules)}\
            \n╰─────────────────")
         string = ""
         for i in CMD_HELP:
