@@ -56,17 +56,17 @@ async def set_not_afk(event):
                 shite = await bot.send_message(event.chat_id, file=pic)
                 shites = await bot.send_message(
                     event.chat_id,
-                    f"`{ALIVE_NAME}` ꜱᴜᴅᴀʜ ᴋᴇᴍʙᴀʟɪ ᴏɴʟɪɴᴇ\n**ᴅᴀʀɪ ᴏꜰꜰʟɪɴᴇ** `{total_afk_time}` **ʏᴀɴɢ ʟᴀʟᴜ**",
+                    f"`{ALIVE_NAME}` đã online\n**Đã offline** `{total_afk_time}` **trước**",
                 )
             else:
                 shite = await bot.send_message(
                     event.chat_id,
-                    f"`{ALIVE_NAME}` ꜱᴜᴅᴀʜ ᴋᴇᴍʙᴀʟɪ ᴏɴʟɪɴᴇ\n**ᴅᴀʀɪ ᴏꜰꜰʟɪɴᴇ** `{total_afk_time}` **ʏᴀɴɢ ʟᴀʟᴜ**",
+                    f"`{ALIVE_NAME}` đã online\n**Đã offline** `{total_afk_time}` **trước**",
                     file=pic,
                 )
         except BaseException:
             shite = await bot.send_message(
-                event.chat_id, f"`{ALIVE_NAME}` ᴋᴇᴍʙᴀʟɪ ᴏɴʟɪɴᴇ\n**ᴅᴀʀɪ ᴏꜰꜰʟɪɴᴇ :** `{total_afk_time}` **ʏᴀɴɢ ʟᴀʟᴜ**"
+                event.chat_id, f"`{ALIVE_NAME}` đã online\n**Đã offline** `{total_afk_time}` **trước**"
             )
 
         except BaseException:
@@ -108,10 +108,10 @@ async def on_afk(event):
         msg = None
         if reason:
             message_to_reply = (
-                f"𝙋𝙀𝙎𝘼𝙉 𝙊𝙏𝙊𝙈𝘼𝙏𝙄𝙎\n\n╭┈──────────────┈\n**▸ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ**\n"
-                f"**▸ ᴋᴀʀᴇɴᴀ :** `{reason}`\n╰┈───────────┈")
+                f"THÔNG BÁO:\n\n╭┈──────────────┈\n**▸ {ALIVE_NAME} đang offline**\n"
+                f"**▸ Lý do :** `{reason}`\n╰┈───────────┈")
         else:
-            message_to_reply = f"𝙋𝙀𝙎𝘼𝙉 𝙊𝙏𝙊𝙈𝘼𝙏𝙄𝙎\n\n╭┈──────────────┈\n**▸ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ**\n╰┈───────────┈"
+            message_to_reply = f"THÔNG BÁO NÈ\n\n╭┈──────────────┈\n**▸ {ALIVE_NAME} đang offline**\n╰┈───────────┈"
         try:
             if pic.endswith((".tgs", ".webp")):
                 msg = await event.reply(file=pic)
@@ -174,55 +174,55 @@ async def _(event):
                 if pic.endswith((".tgs", ".webp")):
                     await bot.send_message(event.chat_id, file=pic)
                     await bot.send_message(
-                        event.chat_id, f"⚡OᖴᖴᒪIᑎE\n\n╭┈──────────────┈\n**▸ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ**\n**▸ ᴋᴀʀᴇɴᴀ :** `{reason}`\n╰┈──────────┈"
+                        event.chat_id, f"⚡OᖴᖴᒪIᑎE\n\n╭┈──────────────┈\n**▸ {ALIVE_NAME} đang offline**\n**▸ Lý do :** `{reason}`\n╰┈──────────┈"
                     )
                 else:
                     await bot.send_message(
-                        event.chat_id, f"⚡OᖴᖴᒪIᑎE\n\n╭┈──────────────┈\n**▸ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ**\n**▸ ᴋᴀʀᴇɴᴀ :** `{reason}`\n╰┈──────────┈", file=pic
+                        event.chat_id, f"⚡OᖴᖴᒪIᑎE\n\n╭┈──────────────┈\n**▸ {ALIVE_NAME} đang offline**\n**▸ Lý do :** `{reason}`\n╰┈──────────┈", file=pic
                     )
             except BaseException:
                 await bot.send_message(
-                    event.chat_id, f"⚡OᖴᖴᒪIᑎE\n\n╭┈──────────────┈\n**▸ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ**\n**▸ ᴋᴀʀᴇɴᴀ :** `{reason}`\n╰┈──────────┈"
+                    event.chat_id, f"⚡OᖴᖴᒪIᑎE\n\n╭┈──────────────┈\n**▸ {ALIVE_NAME} đang offline**\n**▸ Lý do :** `{reason}`\n╰┈──────────┈"
                 )
         else:
             try:
                 if pic.endswith((".tgs", ".webp")):
                     await bot.send_message(event.chat_id, file=pic)
                     await bot.send_message(
-                        event.chat_id, f"**⚡OᖴᖴᒪIᑎE**\n╭┈──────────────┈\n**▸ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ**\n╰┈──────────┈"
+                        event.chat_id, f"**⚡OᖴᖴᒪIᑎE**\n╭┈──────────────┈\n**▸ {ALIVE_NAME} đang offline**\n╰┈──────────┈"
                     )
                 else:
                     await bot.send_message(
-                        event.chat_id, f"**⚡OᖴᖴᒪIᑎE**\n╭┈──────────────┈\n**▸ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ**\n╰┈──────────┈", file=pic
+                        event.chat_id, f"**⚡OᖴᖴᒪIᑎE**\n╭┈──────────────┈\n**▸ {ALIVE_NAME} đang offline**\n╰┈──────────┈", file=pic
                     )
             except BaseException:
-                await bot.send_message(event.chat_id, f"**OᖴᖴᒪIᑎE**\n╭┈──────────────┈\n**▸ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ**\n╰┈──────────┈")
+                await bot.send_message(event.chat_id, f"**OᖴᖴᒪIᑎE**\n╭┈──────────────┈\n**▸ {ALIVE_NAME} đang offline**\n╰┈──────────┈")
         await event.delete()
         try:
             if reason and pic:
                 if pic.endswith((".tgs", ".webp")):
                     await bot.send_message(BOTLOG_CHATID, file=pic)
                     await bot.send_message(
-                        BOTLOG_CHATID, f"**⚡OᖴᖴᒪIᑎE**\n╭┈──────────────┈\n**▸ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ**\n**▸ ᴋᴀʀᴇɴᴀ :** `{reason}`\n╰┈──────────┈"
+                        BOTLOG_CHATID, f"**⚡OᖴᖴᒪIᑎE**\n╭┈──────────────┈\n**▸ {ALIVE_NAME} đang offline**\n**▸ Lý do :** `{reason}`\n╰┈──────────┈"
                     )
                 else:
                     await bot.send_message(
-                        BOTLOG_CHATID, f"**⚡OᖴᖴᒪIᑎE**\n╭┈──────────────┈\n**▸ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ**\n**▸ ᴋᴀʀᴇɴᴀ :** `{reason}`\n╰┈──────────┈", file=pic
+                        BOTLOG_CHATID, f"**⚡OᖴᖴᒪIᑎE**\n╭┈──────────────┈\n**▸ {ALIVE_NAME} đang offline**\n**▸ Lý do :** `{reason}`\n╰┈──────────┈", file=pic
                     )
             elif reason:
                 await bot.send_message(
-                    BOTLOG_CHATID, f"\n**⚡OᖴᖴᒪIᑎE**\n╭┈──────────────┈\n**▸ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ**\n**▸ ᴋᴀʀᴇɴᴀ :** `{reason}`\n╰┈──────────┈"
+                    BOTLOG_CHATID, f"\n**⚡OᖴᖴᒪIᑎE**\n╭┈──────────────┈\n**▸ {ALIVE_NAME} đang offline**\n**▸ Lý do :** `{reason}`\n╰┈──────────┈"
                 )
             elif pic:
                 if pic.endswith((".tgs", ".webp")):
-                    await bot.send_message(BOTLOG_CHATID, f"**⚡OᖴᖴᒪIᑎE**\n╭┈──────────────┈\n**▸ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ**\n╰┈──────────┈")
+                    await bot.send_message(BOTLOG_CHATID, f"**⚡OᖴᖴᒪIᑎE**\n╭┈──────────────┈\n**▸ {ALIVE_NAME} đang offline**\n╰┈──────────┈")
                 else:
-                    await bot.send_message(BOTLOG_CHATID, f"**⚡OᖴᖴᒪIᑎE**\n╭┈──────────────┈\n**▸ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ**\n╰┈──────────┈", file=pic)
+                    await bot.send_message(BOTLOG_CHATID, f"**⚡OᖴᖴᒪIᑎE**\n╭┈──────────────┈\n**▸ {ALIVE_NAME} đang offline**\n╰┈──────────┈", file=pic)
             else:
-                await bot.send_message(BOTLOG_CHATID, f"**⚡OᖴᖴᒪIᑎE **\n╭┈──────────────┈\n **▸ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ **\n╰┈──────────┈")
+                await bot.send_message(BOTLOG_CHATID, f"**⚡OᖴᖴᒪIᑎE **\n╭┈──────────────┈\n **▸ {ALIVE_NAME} đang offline **\n╰┈──────────┈")
         except Exception as e:
             BOTLOG_CHATIDger.warn(str(e))
 
 
 CMD_HELP.update({"afk": f"{geez}afk (reason) or reply media to it "
-                 "\nUsage mention u as afk with cool media when someone tag or reply to any of ur msg or dm."})
+                 "\nCách sử dụng đề cập đến u as afk với phương tiện tuyệt vời khi ai đó gắn thẻ hoặc trả lời bất kỳ tin nhắn hoặc dm nào của bạn."})
