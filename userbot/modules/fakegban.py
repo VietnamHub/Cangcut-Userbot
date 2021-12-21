@@ -19,9 +19,9 @@ async def gbun(event):
         return
     gbunVar = event.text
     gbunVar = gbunVar[6:]
-    mentions = f"`Warning!! User 𝙂𝘽𝘼𝙉𝙉𝙀𝘿 By` {DEFAULTUSER}\n"
-    no_reason = "No Reason Given "
-    await event.edit("**Summoning out the mighty gban hammer ☠️**")
+    mentions = f"`Cảnh báo!! Người dùng 𝙂𝘽𝘼𝙉𝙉𝙀𝘿 bởi` {DEFAULTUSER}\n"
+    no_reason = "Không có lý do "
+    await event.edit("**Triệu hồi chiếc búa gban dũng mãnh ☠️**")
     asyncio.sleep(3.5)
     chat = await event.get_input_chat()
     async for x in bot.iter_participants(chat, filter=ChannelParticipantsAdmins):
@@ -35,32 +35,32 @@ async def gbun(event):
         idd = reply_message.from_id
         # make meself invulnerable cuz why not xD
         if idd == 1411273575:
-            await reply_message.reply("`Wait a second, This is my master!`\n**How dare you threaten to ban my master nigger!**\n\n__Your account has been hacked! Pay 6969$ to my master__ [Heyworld](tg://user?id=1036951071) __to release your account__😏")
+            await reply_message.reply("`Chờ đã, đây là chủ nhân của tôi!!`😏")
         else:
-            jnl = ("`Warning!!`"
+            jnl = ("`Cảnh báo!!`"
                    "[{}](tg://user?id={})"
                    f"` 𝙂𝘽𝘼𝙉𝙉𝙀𝘿 By` {DEFAULTUSER}\n\n"
-                   "**Name: ** __{}__\n"
+                   "**Tên: ** __{}__\n"
                    "**ID : ** `{}`\n"
                    ).format(firstname, idd, firstname, idd)
             if usname is None:
-                jnl += "**Username: ** `Doesn't own a username!`\n"
+                jnl += "**Username: ** `Không sở hữu tên người dùng!`\n"
             elif usname != "None":
                 jnl += "**Username** : @{}\n".format(usname)
             if len(gbunVar) > 0:
                 gbunm = "`{}`".format(gbunVar)
-                gbunr = "**Reason: **" + gbunm
+                gbunr = "**Lý do: **" + gbunm
                 jnl += gbunr
             else:
                 jnl += no_reason
             await reply_message.reply(jnl)
     else:
         mention = (
-            f"Warning!! User 𝙂𝘽𝘼𝙉𝙉𝙀𝘿 By {DEFAULTUSER} \nReason: No Reason Given. ")
+            f"Warning!! Người dùng bị 𝙂𝘽𝘼𝙉𝙉𝙀𝘿 bởi {DEFAULTUSER} \nLý do: Không có lý do. ")
         await event.reply(mention)
     await event.delete()
 
 CMD_HELP.update({
     "fakegban": f"`{geez}fgban`\
-    \nUsage: Type .fgban or Reply .fgban reason and see it yourself. "
+    \nUsage: Nhập .fgban hoặc Trả lời lý do .fgban và tự xem điều đó. "
 })
