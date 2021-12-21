@@ -25,7 +25,7 @@ async def get_user_from_event(event):
         if user.isnumeric():
             user = int(user)
         if not user:
-            await event.edit(f"`{ALIVE_NAME}`: ** Pass the user's username, id or reply!**")
+            await event.edit(f"`{ALIVE_NAME}`: ** Chuyển tên người dùng, id hoặc câu trả lời của người dùng!**")
             return
         if event.message.entities is not None:
             probable_user_mention_entity = event.message.entities[0]
@@ -63,11 +63,11 @@ async def gspide(rk):
     sender = await lazy.get_sender()
     me = await lazy.client.get_me()
     if not sender.id == me.id:
-        rkp = await lazy.reply("`processing...`")
+        rkp = await lazy.reply("`Xử lý...`")
     else:
-        rkp = await lazy.edit("`processing...`")
+        rkp = await lazy.edit("`Xử lý...`")
     me = await rk.client.get_me()
-    await rkp.edit(f"`{ALIVE_NAME}:` **Requesting  to gkick user!**")
+    await rkp.edit(f"`{ALIVE_NAME}:` **Yêu cầu người dùng gkick!**")
     my_mention = "[{}](tg://user?id={})".format(me.first_name, me.id)
     f"@{me.username}" if me.username else my_mention
     await rk.get_chat()
@@ -100,7 +100,7 @@ async def gspide(rk):
                 await rk.client.edit_permissions(i, user, view_messages=False)
                 await rk.client.edit_permissions(i, user, send_messages=True)
                 a += 1
-                await rkp.edit(f"`{ALIVE_NAME}:` **Requesting  to gkicking user!\nGkicked {a} chats.....**")
+                await rkp.edit(f"`{ALIVE_NAME}:` **Yêu cầu người dùng gkkicking!\nGkicked {a} chats.....**")
 
             except BaseException:
                 b += 1
