@@ -241,18 +241,18 @@ async def ban(bon):
             await reply.delete()
     except BadRequestError:
         return await bon.edit(
-            "`I dont have message nuking rights! But still he was banned!`"
+            "`Tôi không có quyền nhắn tin! Nhưng anh vẫn bị cấm!`"
         )
     # Delete message and then tell that the command
     # is done gracefully
     # Shout out the ID, so that fedadmins can fban later
     if reason:
         await bon.edit(
-            f"`USER:` [{user.first_name}](tg://user?id={user.id})\n`ID:` `{str(user.id)}` was banned !!\n`Reason:` {reason}"
+            f"`USER:` [{user.first_name}](tg://user?id={user.id})\n`ID:` `{str(user.id)}` đã bị cấm !!\n`Lý do:` {reason}"
         )
     else:
         await bon.edit(
-            f"`USER:` [{user.first_name}](tg://user?id={user.id})\n`ID:` `{str(user.id)}` was banned !!"
+            f"`USER:` [{user.first_name}](tg://user?id={user.id})\n`ID:` `{str(user.id)}` đã bị cấm !!"
         )
     # Announce to the logging group if we have banned the person
     # successfully!
@@ -298,7 +298,7 @@ async def nothanos(unbon):
                 f"CHAT: {unbon.chat.title}(`{unbon.chat_id}`)",
             )
     except UserIdInvalidError:
-        await unbon.edit("`Uh oh my unban logic broke!`")
+        await unbon.edit("`Uh oh logic unban của tôi đã bị phá vỡ!`")
 
 
 @bot.on(geezbot_cmd(outgoing=True, pattern=r"mute(?: |$)(.*)"))
@@ -326,7 +326,7 @@ async def spider(spdr):
 
     if user.id == self_user.id:
         return await spdr.edit(
-            "`Hands too short, can't duct tape myself...\n(ヘ･_･)ヘ┳━┳`"
+            "`Tay quá ngắn, không thể tự mình băng keo..\n(ヘ･_･)ヘ┳━┳`"
         )
 
     # If everything goes well, do announcing and mute
@@ -339,9 +339,9 @@ async def spider(spdr):
 
             # Announce that the function is done
             if reason:
-                await spdr.edit(f"`User di Mute !!`\nKarena: {reason}")
+                await spdr.edit(f"Đã khoá cái mõm lại bạn này lại !!\nLý do: {reason}")
             else:
-                await spdr.edit("`User Berhasil di Mute !!`")
+                await spdr.edit("Đã khoá mõm thằng nhóc này!!")
 
             # Announce to logging group
             if BOTLOG:
@@ -352,7 +352,7 @@ async def spider(spdr):
                     f"CHAT: {spdr.chat.title}(`{spdr.chat_id}`)",
                 )
         except UserIdInvalidError:
-            return await spdr.edit("`Uh oh my mute logic broke!`")
+            return await spdr.edit("`Uh oh logic câm của tôi đã bị phá vỡ!`")
 
 
 @bot.on(geezbot_cmd(outgoing=True, pattern=r"unmute(?: |$)(.*)"))
@@ -518,10 +518,10 @@ async def rm_deletedacc(show):
 
     con = show.pattern_match.group(1).lower()
     del_u = 0
-    del_status = "`No deleted accounts found, Group is clean`"
+    del_status = "`Không tìm thấy tài khoản đã xóa, Nhóm sạch`"
 
     if con != "clean":
-        await show.edit("`Searching for ghost/deleted/zombie accounts...`")
+        await show.edit("`Tìm kiếm tài khoản rác / đã xóa / kéo mem..`")
         async for user in show.client.iter_participants(show.chat_id):
 
             if user.deleted:
@@ -529,8 +529,8 @@ async def rm_deletedacc(show):
                 await sleep(1)
         if del_u > 0:
             del_status = (
-                f"`Found` **{del_u}** `ghost/deleted/zombie account(s) in this group,"
-                "\nclean them by using .zombies clean`")
+                f"`Tìm thấy` **{del_u}** `tài khoản rác / đã xóa / kéo mem trong nhóm này,"
+                "\nlàm sạch chúng bằng cách sử dụng .zombies clean`")
         return await show.edit(del_status)
 
     # Here laying the sanity check
@@ -540,9 +540,9 @@ async def rm_deletedacc(show):
 
     # Well
     if not admin and not creator:
-        return await show.edit("`I am not an admin here!`")
+        return await show.edit("`Tôi không phải là quản trị viên ở đây!`")
 
-    await show.edit("`Deleting deleted accounts...\nOh I can do that?!?!`")
+    await show.edit("`Đang sút từng đứa ra khỏi nhóm ...\nOh tôi có thể làm điều đó?!?!`")
     del_u = 0
     del_a = 0
 
@@ -553,7 +553,7 @@ async def rm_deletedacc(show):
                     EditBannedRequest(show.chat_id, user.id, BANNED_RIGHTS)
                 )
             except ChatAdminRequiredError:
-                return await show.edit("`I don't have ban rights in this group`")
+                return await show.edit("`Tôi không có quyền cấm trong nhóm này`")
             except UserAdminInvalidError:
                 del_u -= 1
                 del_a += 1
@@ -565,8 +565,8 @@ async def rm_deletedacc(show):
 
     if del_a > 0:
         del_status = (
-            f"Cleaned **{del_u}** deleted account(s) "
-            f"\n**{del_a}** deleted admin accounts are not removed"
+            f"Đã dọn dẹp **{del_u}** con sâu trong group "
+            f"\n**{del_a}** tài khoản quản trị viên đã xóa không bị xóa"
         )
     await show.edit(del_status)
     await sleep(2)
@@ -779,7 +779,7 @@ async def get_user_from_id(user, event):
 async def get_usersdel(show):
     info = await show.client.get_entity(show.chat_id)
     title = info.title if info.title else "this chat"
-    mentions = "deletedUsers in {}: \n".format(title)
+    mentions = "Người dùng bị khoá tài khoản trong {}: \n".format(title)
     try:
         if not show.pattern_match.group(1):
             async for user in show.client.iter_participants(show.chat_id):
@@ -806,7 +806,7 @@ async def get_usersdel(show):
         await show.edit(mentions)
     except MessageTooLongError:
         await show.edit(
-            "Damn, this is a huge group. Uploading deletedusers lists as file."
+            "Chết tiệt, đây là một nhóm khổng lồ. Tải lên danh sách người dùng đã xóa dưới dạng tệp."
         )
         file = open("userslist.txt", "w+")
         file.write(mentions)
@@ -836,7 +836,7 @@ async def get_userdel_from_event(event):
             user = int(user)
 
         if not user:
-            return await event.edit("`Pass the deleted user's username, id or reply!`")
+            return await event.edit("`Chuyển tên người dùng, id hoặc câu trả lời của người dùng đã bị xóa!`")
 
         if event.message.entities is not None:
             probable_user_mention_entity = event.message.entities[0]
