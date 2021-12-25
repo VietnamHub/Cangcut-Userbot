@@ -27,7 +27,7 @@ async def get_full_user(event):
         if user.isnumeric():
             user = int(user)
         if not user:
-            await event.edit("`User ID Is Required")
+            await event.edit("`ID người dùng là bắt buộc`")
             return
         if event.message.entities is not None:
             probable_user_mention_entity = event.message.entities[0]
@@ -116,7 +116,7 @@ async def gspider(userbot):
     except BaseException:
         pass
     return await friday.edit(
-        f"**Gbanned [{user.first_name}](tg://user?id={user.id}) Từ : {a} nhóm**"
+        f"**Đã cấm [{user.first_name}](tg://user?id={user.id}) khỏi {a} nhóm**"
     )
 
     if BOTLOG:
