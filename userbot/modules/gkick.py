@@ -25,7 +25,7 @@ async def get_user_from_event(event):
         if user.isnumeric():
             user = int(user)
         if not user:
-            await event.edit(f"`{ALIVE_NAME}`: ** Chuyển tên người dùng, id hoặc câu trả lời của người dùng!**")
+            await event.edit(f"`{ALIVE_NAME}`: **Chuyển tên người dùng, id hoặc câu trả lời của người dùng!**")
             return
         if event.message.entities is not None:
             probable_user_mention_entity = event.message.entities[0]
@@ -100,14 +100,14 @@ async def gspide(rk):
                 await rk.client.edit_permissions(i, user, view_messages=False)
                 await rk.client.edit_permissions(i, user, send_messages=True)
                 a += 1
-                await rkp.edit(f"`{ALIVE_NAME}:` **Yêu cầu người dùng gkkicking!\nGkicked {a} chats.....**")
+                await rkp.edit(f"`{ALIVE_NAME}:` **Yêu cầu người dùng gkkicking!\nĐang kick {a} nhóm.....**")
 
             except BaseException:
                 b += 1
     else:
-        await rkp.edit(f"`{ALIVE_NAME}:` **Reply to a user !! **")
+        await rkp.edit(f"`{ALIVE_NAME}:` **Trả lời người dùng !! **")
 
-    return await rkp.edit(f"`{ALIVE_NAME}:` **GKicked [{user.first_name}](tg://user?id={user.id}) in {a} chat(s) **")
+    return await rkp.edit(f"`{ALIVE_NAME}:` **Đã kick [{user.first_name}](tg://user?id={user.id}) khỏi {a} nhóm **")
 
 CMD_HELP.update({
     "gkick": f"`{geez}gkick reason`\
