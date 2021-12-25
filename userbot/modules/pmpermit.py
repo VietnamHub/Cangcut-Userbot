@@ -29,7 +29,7 @@ from userbot import CUSTOM_CMD as geez
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 
 DEF_UNAPPROVED_MSG = (
-    "https://t.me/+S5obLSW8ChIxNjA1")
+    "BỐ MÀY LÀ BOT")
 # =================================================================
 
 
